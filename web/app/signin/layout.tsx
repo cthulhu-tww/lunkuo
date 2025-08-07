@@ -18,7 +18,7 @@ export default function SignInLayout({ children }: any) {
           </div>
         </div>
         {systemFeatures.branding.enabled === false && <div className='system-xs-regular px-8 py-6 text-text-tertiary'>
-          © {new Date().getFullYear()} LangGenius, Inc. All rights reserved.
+          © {new Date().getFullYear()} 杭州国科智飞科技有限公司 技术支持.
         </div>}
       </div>
     </div>
