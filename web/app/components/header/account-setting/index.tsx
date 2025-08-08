@@ -111,19 +111,7 @@ export default function AccountSetting({
       key: 'workspace-group',
       name: t('common.settings.workplaceGroup'),
       items: workplaceGroupItems,
-    },
-    {
-      key: 'account-group',
-      name: t('common.settings.generalGroup'),
-      items: [
-        {
-          key: 'language',
-          name: t('common.settings.language'),
-          icon: <RiTranslate2 className={iconClassName} />,
-          activeIcon: <RiTranslate2 className={iconClassName} />,
-        },
-      ],
-    },
+    }
   ]
   const scrollRef = useRef<HTMLDivElement>(null)
   const [scrolled, setScrolled] = useState(false)
@@ -139,7 +127,7 @@ export default function AccountSetting({
     }
   }, [])
 
-  const activeItem = [...menuItems[0].items, ...menuItems[1].items].find(item => item.key === activeMenu)
+  const activeItem = [...menuItems[0].items].find(item => item.key === activeMenu)
 
   const [searchValue, setSearchValue] = useState<string>('')
 
