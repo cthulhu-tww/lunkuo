@@ -553,6 +553,8 @@ services:
   api:
     image: langgenius/dify-api:1.7.1
     restart: always
+    ports:
+      - "5001:5001"
     environment:
       # Use the shared environment variables.
       <<: *shared-api-worker-env
@@ -687,7 +689,7 @@ services:
 
   # The DifySandbox
   sandbox:
-    image: langgenius/dify-sandbox:0.2.12
+    image: svcvit/dify-sandbox-py:0.1.4
     restart: always
     environment:
       # The DifySandbox configurations
